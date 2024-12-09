@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de Voitures</title>
+    <script>
+        function searchCar() {
+            const brand = document.getElementById("carBrand").value;
+            window.location.href = `result.html?brand=${encodeURIComponent(brand)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Recherche de Voitures</h1>
+    <input type="text" id="carBrand" placeholder="Entrez une marque de voiture">
+    <button onclick="searchCar()">Rechercher</button>
+</body>
+</html>
