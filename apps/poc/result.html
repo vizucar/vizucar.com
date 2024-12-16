@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de recherche</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Résultats de la recherche</h1>
+    <div id="car-images"></div>
+
+    <script>
+        // Récupère le paramètre "brand" dans l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const brand = urlParams.get("brand");
+
+        // Envoie la requête à l'API
+        fetch(`http://localhost:3000/search?brand=${brand}`)
+            .then(response => response.json())
+            .then(images => {
+                const container = document.getElementById('car-images');
+                if (images.length === 0) {
+                    container.innerHTML = "<p>Aucune image trouvée pour cette marque.</p>";
+                } else {
+                    // Affiche chaque image
+                    images.forEach(imageUrl => {
+                        const img = document.createElement('img');
+                        img.src = imageUrl;
+                        img.alt = "Image de voiture";
+                        container.appendChild(img);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error("Erreur lors de la récupération des images:", error);
+            });
+    </script>
+</body>
+</html>
