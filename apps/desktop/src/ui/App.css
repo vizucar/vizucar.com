@@ -40,3 +40,45 @@
 .read-the-docs {
   color: #888;
 }
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2.25rem;
+  box-sizing: border-box;
+  background-color: #181818;
+  -webkit-app-region: drag;
+}
+
+header button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-inline: 0.75rem;
+  -webkit-app-region: no-drag;
+}
+
+header button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+header button:hover {
+  background-color: #333;
+}
+
+header button#close {
+  padding-inline: 0.6rem;
+}
+
+header button#close:hover {
+  background-color: red;
+}
