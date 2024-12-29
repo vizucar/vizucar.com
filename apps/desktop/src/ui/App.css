@@ -1,44 +1,12 @@
 #root {
-  max-width: 1280px;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.App {
+  padding-top: 2.4rem;
 }
 
 header {
@@ -51,7 +19,7 @@ header {
   width: 100%;
   height: 2.25rem;
   box-sizing: border-box;
-  background-color: #181818;
+  background-color: #fff;
   -webkit-app-region: drag;
 }
 
@@ -64,6 +32,7 @@ header button {
   height: 100%;
   padding-inline: 0.75rem;
   -webkit-app-region: no-drag;
+  color: black;
 }
 
 header button:focus {
@@ -72,7 +41,7 @@ header button:focus {
 }
 
 header button:hover {
-  background-color: #333;
+  background-color: #e0e0e0;
 }
 
 header button#close {
@@ -81,4 +50,76 @@ header button#close {
 
 header button#close:hover {
   background-color: red;
+}
+
+.Home {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: black;
+}
+
+.nav a {
+  color: black;
+  font-weight: bold;
+  font-size: small;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: #f1f1f1;
+}
+
+.search-bar-container {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Ligne fine */
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1); /* Ombre uniquement en dessous */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  background-color: #e0e0e0;
+  border-radius: 0.25rem;
+  padding-inline: 0.5rem;
+  transition: box-shadow 0.2s ease; /* Transition douce pour l'effet de focus */
+}
+
+#search-input {
+  flex-grow: 1; /* L'input occupe tout l'espace disponible */
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 1rem; /* Taille de la police */
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 0 2px black;
 }
