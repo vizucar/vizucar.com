@@ -9,7 +9,7 @@ export default function Home() {
           <a href="/metrics">Performance Metrics</a>
         </div>
       </div>
-      <div className="search-bar-container">
+      <div className="top-container">
         <div className="search-bar">
           <input id="search-input" type="text" placeholder="Search..." />
           <Search size={23} />

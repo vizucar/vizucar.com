@@ -21,6 +21,8 @@ header {
   box-sizing: border-box;
   background-color: #fff;
   -webkit-app-region: drag;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 header button {
@@ -49,6 +51,7 @@ header button#close {
 }
 
 header button#close:hover {
+  border-top-right-radius: 0.25rem;
   background-color: red;
 }
 
@@ -85,14 +88,34 @@ header button#close:hover {
   background-color: #f1f1f1;
 }
 
-.search-bar-container {
+.top-container {
   display: flex;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Ligne fine */
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1); /* Ombre uniquement en dessous */
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: black;
+  font-weight: bold;
+  font-size: small;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  color: black;
+  margin-right: 1rem;
+}
+
+.back:hover {
+  color: #7e7e7e;
 }
 
 .search-bar {
@@ -122,4 +145,76 @@ header button#close:hover {
 
 .search-bar:focus-within {
   box-shadow: 0 0 0 2px black;
+}
+
+.mainGrid {
+  height: 120px;
+  padding: 0.5rem;
+}
+
+.mainGridNameStat {
+  display: flex;
+  justify-content: end;
+  padding-right: 0.3rem;
+}
+
+.legend-top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 200;
+  font-size: 0.7rem;
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.legend-bottom {
+  display: flex;
+  justify-content: end;
+  font-weight: 200;
+  font-size: 0.7rem;
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.metrics-stat {
+  display: grid;
+  grid-template-columns: 10rem auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.selectOption {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  border-right: 0.1rem solid #e0e0e0;
+}
+
+.selectOption:hover {
+  background-color: #e0e0e0;
+}
+
+.selectOptionTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 0.3rem;
+}
+
+.selectOptionTitle :first-child {
+  font-weight: 600;
+}
+
+.selectOptionChart {
+  height: 4rem;
+  width: 100%;
+}
+
+.selectOptionChart * {
+  cursor: pointer;
 }

@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import LayoutApp from "./components/LayoutApp";
 import Home from "./views/Home";
+import Metrics from "./views/Metrics";
 
 function App() {
   const router = useMemo(
@@ -18,7 +19,7 @@ function App() {
             },
             {
               path: "metrics",
-              element: <h1>Ressource</h1>,
+              element: <Metrics />,
             },
           ],
         },

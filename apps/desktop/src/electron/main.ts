@@ -1,15 +1,20 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import path from "path";
 import { getPreloadPath } from "./pathResolver.js";
+import { getStaticData, pollRessources } from "./resourceManager.js";
 import { ipcMainOn, isDev } from "./util.js";
 
 app.on("ready", () => {
   const mainWindow = new BrowserWindow({
+    width: 500,
+    height: 500,
+    resizable: false,
     frame: false,
     webPreferences: {
       preload: getPreloadPath(),
     },
   });
+
   if (isDev()) {
     mainWindow.loadURL("http://localhost:5123");
   } else {
@@ -28,5 +33,11 @@ app.on("ready", () => {
         mainWindow.minimize();
         break;
     }
+  });
+
+  pollRessources(mainWindow);
+
+  ipcMain.handle("getStaticData", () => {
+    return getStaticData();
   });
 });
