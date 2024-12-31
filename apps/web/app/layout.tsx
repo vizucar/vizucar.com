@@ -20,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={clsx(inter.className, "bg-background")}>
-        <Header />
-        <main>{children}</main>
+        <section className="bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat">
+          <Header />
+          <main>{children}</main>
+        </section>
         <Footer />
       </body>
     </html>

@@ -9,8 +9,8 @@ export default function Header() {
           <Image
             src={"/vizucar-logo/vizucar.com-bg-black.png"}
             alt="vizucar.com logo"
-            width={200}
-            height={50}
+            width={300}
+            height={90}
           />
         </Link>
       </div>
@@ -21,8 +21,8 @@ export default function Header() {
           <Image
             src={"/icons/github.png"}
             alt="vizucar.com logo"
-            width={30}
-            height={30}
+            width={65}
+            height={60}
           />
         </Link>
       </nav>
