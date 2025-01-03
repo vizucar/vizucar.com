@@ -13,6 +13,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      width: {
+        "7/10": "70%", 
+        "6.5/10": "65%",
+        "8.5/10":"85%",
+        "8/10":"80%",
+      },
     },
   },
   plugins: [],
