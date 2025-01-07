@@ -15,7 +15,7 @@ export default function Header() {
         </Link>
       </div>
       <nav className="flex items-center gap-20 font-bold text-2xl">
-        <Link href={"#how-it-works"}>How it works ?</Link>
+        <Link href={"#how-it-works"}>How it works</Link>
         <Link href={"#team"} className="hover:text-blue-500">Team</Link>
         <Link href={"https://github.com/vizucar"}>
           <Image
