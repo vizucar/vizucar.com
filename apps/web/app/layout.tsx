@@ -1,12 +1,11 @@
 import Footer from "@/src/feature/layout/Footer";
+import { TeamSection } from "@/src/feature/layout/TeamSection";
 import Header from "@/src/feature/layout/Header";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import Link from "next/link";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -84,73 +83,7 @@ export default function RootLayout({
           <h1 id="team" className="text-7xl font-bold">Team</h1>
         </section>
 
-        <article className="flex justify-around items-center p-4 h-[500px]">
-
-          <Link href={"https://github.com/oshio10"} className="relative group block w-[400px]  mx-auto">
-            <div className="relative bg-gray-900 text-white rounded overflow-hidden shadow-lg">
-              <Image src="/icons/profil.png" alt="profile" width={200} height={200} className="object-cover"/>
-              <h2 className="text-center text-xl font-bold p-4">Developer</h2>
-
-              <div className="absolute inset-0 bg-gray-800 bg-opacity-90 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-lg font-semibold mb-2">About Me</h3>
-                <p className="text-sm">
-                  Passionate developer specializing in web and mobile applications. 
-                  Loves solving complex problems and building amazing user experiences.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-
-          <Link href={"https://github.com/mohamed-rahmani"} className="block w-[400px] overflow-hidden group ">
-            <div className="relative bg-gray-900 text-white rounded shadow-lg transition-all duration-300 group-hover:h-[350px]   ">
-              <Image src="/icons/profil.png" alt="profile" width={200} height={200} className="object-cover"/>
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
-                <h2 className="text-center text-xl font-bold">Developer</h2>
-              </div>
-
-              <div className="absolute left-0 right-0 top-[200px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-              <p className="text-sm text-gray-300">
-                  Passionate developer specializing in web and mobile applications. 
-                  Loves solving complex problems and building amazing user experiences.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-
-          <Link href={"https://github.com/K-Yann-K"} className="relative group block w-[400px]  mx-auto">
-            <div className="relative bg-gray-900 text-white rounded overflow-hidden shadow-lg">
-              <Image src="/icons/profil.png" alt="profile" width={200} height={200} className="object-cover"/>
-              <h2 className="text-center text-xl font-bold p-4">Developer</h2>
-
-              <div className="absolute inset-0 bg-gray-800 bg-opacity-90 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-lg font-semibold mb-2">About Me</h3>
-                <p className="text-sm">
-                  Passionate developer specializing in web and mobile applications. 
-                  Loves solving complex problems and building amazing user experiences.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          <Link href={"https://github.com/vithurzen"} className="block w-[400px] overflow-hidden group ">
-            <div className="relative bg-gray-900 text-white rounded shadow-lg transition-all duration-300 group-hover:h-[350px]   ">
-              <Image src="/icons/profil.png" alt="profile" width={200} height={200} className="object-cover"/>
-
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
-                <h2 className="text-center text-xl font-bold">Developer</h2>
-              </div>
-
-              <div className="absolute left-0 right-0 top-[200px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4">
-              <p className="text-sm text-gray-300">
-                  Passionate developer specializing in web and mobile applications. 
-                  Loves solving complex problems and building amazing user experiences.
-                </p>
-              </div>
-            </div>
-          </Link>
-        </article>
+        <TeamSection/>
 
         <Footer/>
 
