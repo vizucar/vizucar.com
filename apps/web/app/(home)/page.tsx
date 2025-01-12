@@ -14,8 +14,8 @@ export default function page() {
         more than <span className="text-white font-bold">144 car brands</span>
       </p>
       <div className="flex items-center justify-between w-[750px]">
-        <button className="bg-red-500 text-white px-4 py-2 w-[325px] flex items-center justify-center gap-2 rounded ">
-          <div className="bg-white p-1 ">
+        <button className="bg-red-600 text-white px-4 py-4 w-[320px] flex items-center justify-center gap-4 rounded-xl transition-all duration-300 hover:bg-red-500">
+          <div className="bg-white p-1  rounded">
             <Image
               src={"/icons/windows.png"}
               alt="window's logo by Smashicons"
@@ -25,7 +25,7 @@ export default function page() {
           </div>
           <p className="text-3xl">Download</p>
         </button>
-        <button className="bg-red-500 text-white px-4 py-2 w-[325px] flex items-center justify-center gap-2 rounded">
+        <button className="bg-red-600 text-white py-4 w-[320px] flex items-center justify-center gap-4 rounded-xl transition-all duration-300 hover:bg-red-500">
           <div className="bg-white p-1 rounded">
             <Image
               src={"/icons/linux.png"}

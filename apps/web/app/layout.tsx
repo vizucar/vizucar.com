@@ -31,7 +31,7 @@ export default function RootLayout({
           </div>
         </section>
         
-        <article className="flex justify-between items-center p-4 gap-4">
+        <article className="flex justify-between items-center p-4 mb-5 gap-4">
           <Image src={"/cars-logo/9807_McLaren_Logo.png"} alt={"logo maclaren"} width={200} height={200}/>
           <Image src={"/cars-logo/778270e3447e1c123e72a4fa4e9a827e.png"} alt={"logo maclaren"} width={200} height={200}/>
           <Image src={"/cars-logo/1686109983toyota-car-logo-551086012.png"} alt={"logo maclaren"} width={200} height={200}/>
