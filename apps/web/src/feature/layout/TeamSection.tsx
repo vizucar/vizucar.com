@@ -55,7 +55,6 @@ export function TeamSection() {
             />
             </div>
 
-            {/* Tooltip */}
             <div className="absolute bottom-[-80px] left-1/2 transform -translate-x-1/2 w-[200px] bg-gray-800 text-white text-center rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
             <h3 className="font-bold text-lg">{member.name}</h3>
             <p className="text-sm">{member.role}</p>

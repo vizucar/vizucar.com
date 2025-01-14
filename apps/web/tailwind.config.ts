@@ -30,6 +30,19 @@ export default {
         '6/10': '60%',  
         '7/10': '70%',        
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 40s linear infinite",
+      },
+      gradientColorStops: {
+        transparentBlack: "rgba(0, 0, 0, 0)",
+        fullBlack: "black",
+      },
     },
   },
   plugins: [],
