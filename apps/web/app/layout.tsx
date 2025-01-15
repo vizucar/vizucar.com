@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={clsx(inter.className, "bg-background")}>
       <section className="relative h-screen">
-          <div className="absolute top-0 right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-[length:125%]"></div>
+          <div className="absolute top-0 right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-[length:130%]"></div>
 
           <div className="relative z-10 ">
             <Header />
@@ -33,22 +33,6 @@ export default function RootLayout({
         </section>
         
         <BrandSection />
-
-
-        <article className="flex justify-between items-center p-4 gap-4">
-          <Image src={"/cars-logo/gmc-logo.png"} alt={"GMC logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/honda-logo-png-picture-20.png"} alt={"Honda logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/lamborghini_PNG10709-4027778433.png"} alt={"Lamborghini logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/Logo-Renault.png"} alt={"Renault logo"} width={200} height={200}/>
-          <Image src={"/cars-logo/MBG.DE-da0d7ae5.png"} alt={"Mercedes Benz logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/Mercedes-AMG_logo_(grey).png"} alt={"Mercedes AMG logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/nissan-logo-1-3703895588.png"} alt={"Nissan logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/peugeot-logo-eps-png-peugeot-logo-hd-png-meaning-information-2200-1097620236.png"} alt={"Peugeot logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/Porsche-Logo.png"} alt={"Porsche logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/Red-Bull-Logo.png"} alt={"RedBull logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/Tesla_T_symbol.svg.png"} alt={"Tesla logo "} width={200} height={200}/>
-          <Image src={"/cars-logo/Volkswagen-logo-2019-1500x1500-grand.png"} alt={"Volkswagen logo "} width={200} height={200}/>
-        </article>
 
         <section className="bg-gradient-to-b from-black to-[#161414]  text-center text-white p-4 h-full flex flex-col items-center">
           <h1 id="how-it-works" className="text-7xl font-bold mt-[100px]">How does it Works</h1>

@@ -31,13 +31,19 @@ export default {
         '7/10': '70%',        
       },
       keyframes: {
-        marquee: {
+        forward: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
         },
+
+        backward: {
+          "100%": { transform: "translateX(100%)" },
+          "0%": { transform: "translateX(-100%)" },
+        },
       },
       animation: {
-        marquee: "marquee 40s linear infinite",
+        forward: "forward 40s linear infinite",
+        backward: "backward 40s linear infinite",
       },
       gradientColorStops: {
         transparentBlack: "rgba(0, 0, 0, 0)",
