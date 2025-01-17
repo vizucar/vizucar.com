@@ -13,6 +13,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        'max-[1900px]': { max: '1900px' },
+      },
+      backgroundSize: {
+        'custom-zoom': '130%',
+      },
       width: {
         "7/10": "70%", 
         "6.5/10": "65%",

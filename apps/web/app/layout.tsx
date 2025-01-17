@@ -24,7 +24,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={clsx(inter.className, "bg-background")}>
       <section className="relative h-screen">
-          <div className="absolute top-0 right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-[length:130%]"></div>
+          <div className="absolute top-0 right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-custom-zoom max-[1900px]:bg-none"></div>
+          {/* retirer la valeurs statiques du background en fonction du main == page.tsx*/}
 
           <div className="relative z-10 ">
             <Header />
@@ -36,7 +37,7 @@ export default function RootLayout({
 
         <section className="bg-gradient-to-b from-black to-[#161414]  text-center text-white p-4 h-full flex flex-col items-center">
           <h1 id="how-it-works" className="text-7xl font-bold mt-[100px]">How does it Works</h1>
-            <p className="text-gray-100 text-4xl mt-[100px] w-[700px]">
+            <p className="text-gray-100 text-4xl mt-[100px] w-full sm:w-[500px] md:w-[600px] lg:w-[700px]">
               Vizucar allows his user to search a car among thousands of vehicles.
               All of this is possible due to the Vizucar API
             </p>
@@ -45,7 +46,7 @@ export default function RootLayout({
         <section className="bg-[#161414] p-4 h-full flex items-center justify-center">
           <Image className="rounded mt-[100px] mb-[100px]"
             src={"/vizucar-visual.png"}
-            alt="window's logo by Smashicons"
+            alt="interface of vizucar (beta)"
             width={1000}
             height={1020}
           />
