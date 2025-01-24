@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between p-10 bg-[#181516]">
-      <div>
+    <footer className=" flex items-center justify-between p-10 bg-[#181516]">
+      <div className="relative group">
         <Link href={"/"}>
           <Image
             src={"/vizucar-logo/vizucar.com-bg-gray.png"}
@@ -13,6 +13,9 @@ export default function Footer() {
             height={200}
           />
         </Link>
+        <p className="w-full text-center italic absolute top-[70%] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 text-white text-xl font-medium transition-all duration-300">
+          Visualize the car of your dream
+        </p>
       </div>
       <div className="flex flex-col gap-10">
         <div className="flex justify-between text-2xl">

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="flex items-center justify-between px-32">
-      <div>
+      <div className="relative group">
         <Link href={"/"}>
           <Image
             src={"/vizucar-logo/vizucar.com-bg-black.png"}
@@ -13,6 +13,9 @@ export default function Header() {
             height={10}
           />
         </Link>
+        <p className="w-full text-center italic absolute top-[70%] left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 text-white text-xl font-medium transition-all duration-300">
+          Visualize the car of your dream
+        </p>
       </div>
       <nav className="flex items-center gap-20 text-3xl">
         <Link href={"#how-it-works"} className="font-medium transition-all duration-300 hover:font-bold">How it works</Link>
@@ -26,6 +29,7 @@ export default function Header() {
             className="transition-transform duration-300 hover:scale-110"
           />
         </Link>
+        
       </nav>
     </header>
   );

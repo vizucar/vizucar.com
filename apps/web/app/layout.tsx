@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={clsx(inter.className, "bg-background")}>
-      <section className="relative h-screen">
-          <div className="absolute top-0 right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-custom-zoom max-[1900px]:bg-none"></div>
-          {/* retirer la valeurs statiques du background en fonction du main == page.tsx*/}
+      <section className="relative h-screen ">
+          <div className="absolute right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-custom-zoom max-[1900px]:bg-none"></div>
+          {/* modifier les tailles car adaptés lorsque le zoom naviguateur est 50% au lieu de 100% */}
 
           <div className="relative z-10 ">
             <Header />
