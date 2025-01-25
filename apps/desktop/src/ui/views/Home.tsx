@@ -27,6 +27,15 @@ export default function Home() {
   const [visibleCars, setVisibleCars] = useState<Car[]>([]);
   const [copiedImageId, setCopiedImageId] = useState<number | null>(null);
   const [suggestion, setSuggestion] = useState<boolean>(true);
+  const [responseStats, setResponseStats] = useState<{
+    min: number | null;
+    max: number | null;
+    average: number | null;
+  }>({
+    min: null,
+    max: null,
+    average: null,
+  });
 
   const categories = [
     { name: "sport", image: sport },
@@ -37,7 +46,34 @@ export default function Home() {
 
   const { data, error, isLoading } = useQuery({
     queryKey: [searchCar, keyword],
-    queryFn: () => searchCar(keyword as string),
+    queryFn: async () => {
+      const startTime = performance.now();
+      const result = await searchCar(keyword as string);
+      const endTime = performance.now();
+      const responseTime = endTime - startTime;
+
+      // Calcul des statistiques
+      const newMin =
+        responseStats.min === null
+          ? responseTime
+          : Math.min(responseStats.min, responseTime);
+      const newMax =
+        responseStats.max === null
+          ? responseTime
+          : Math.max(responseStats.max, responseTime);
+      const newAverage =
+        responseStats.average === null
+          ? responseTime
+          : (responseStats.average + responseTime) / 2;
+
+      setResponseStats({
+        min: newMin,
+        max: newMax,
+        average: newAverage,
+      });
+
+      return result;
+    },
     enabled: !!keyword,
   });
 
@@ -109,8 +145,29 @@ export default function Home() {
             type="text"
             placeholder="Search..."
           />
-          <Search size={23} />
+          <Search size={23} className="search-logo" />
         </div>
+        {responseStats.min !== null &&
+          responseStats.max !== null &&
+          responseStats.average !== null && (
+            <div className="response-stats-container">
+              <div className="response-stat-tag">
+                <span className="stat-value">
+                  Min: {responseStats.min.toFixed(2)} ms
+                </span>
+              </div>
+              <div className="response-stat-tag">
+                <span className="stat-value">
+                  Max: {responseStats.max.toFixed(2)} ms
+                </span>
+              </div>
+              <div className="response-stat-tag">
+                <span className="stat-value">
+                  Average: {responseStats.average.toFixed(2)} ms
+                </span>
+              </div>
+            </div>
+          )}
       </div>
       <div>
         {suggestion && (

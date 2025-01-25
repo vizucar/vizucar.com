@@ -89,6 +89,7 @@ header button#close:hover {
 
 .top-container {
   display: flex;
+  flex-direction: column;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Ligne fine */
@@ -124,7 +125,6 @@ header button#close:hover {
   height: 2rem;
   background-color: #e0e0e0;
   border-radius: 0.25rem;
-  padding-inline: 0.5rem;
   transition: box-shadow 0.2s ease; /* Transition douce pour l'effet de focus */
 }
 
@@ -132,10 +132,15 @@ header button#close:hover {
   flex-grow: 1; /* L'input occupe tout l'espace disponible */
   height: 100%;
   background: transparent;
+  padding-left: 0.5rem;
   border: none;
   outline: none;
   color: black;
   font-size: 1rem; /* Taille de la police */
+}
+
+.search-logo {
+  padding-right: 0.5rem;
 }
 
 #search-input:focus {
@@ -219,7 +224,7 @@ header button#close:hover {
 }
 
 .cars-list-container {
-  max-height: calc(100vh - 8.8rem);
+  max-height: calc(100vh - 10.9rem);
   overflow-y: auto;
   overflow-x: hidden;
   padding: 10px;
@@ -395,4 +400,17 @@ header button#close:hover {
   font-weight: bold;
   text-transform: capitalize; /* Transforme les noms en texte capitalisé */
   text-align: center;
+}
+
+.response-stats-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+}
+
+.response-stat-tag {
+  font-size: small;
+  padding-inline: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e0;
 }
