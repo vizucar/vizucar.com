@@ -24,20 +24,21 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={clsx(inter.className, "bg-background")}>
       <section className="relative h-screen">
-          <div className="absolute top-0 right-0 w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat bg-custom-zoom max-[1900px]:bg-none"></div>
-          {/* retirer la valeurs statiques du background en fonction du main == page.tsx*/}
+          <div className="hidden sm:block absolute  right-0   w-8/10 h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat lg:bg-zoom-130 "></div>
+          <div className=" sm:hidden absolute w-[171%] top-[-100px] left-[-305px] h-full bg-[url('/audi-r8-rouge.jpg')] bg-cover bg-no-repeat "></div>
+          {/* modifier les tailles car adaptés lorsque le zoom naviguateur est 50% au lieu de 100% */}
 
           <div className="relative z-10 ">
             <Header />
-            <main className="w-2/5">{children}</main>
+            <main className="w-1/2">{children}</main>
           </div>
         </section>
         
         <BrandSection />
 
         <section className="bg-gradient-to-b from-black to-[#161414]  text-center text-white p-4 h-full flex flex-col items-center">
-          <h1 id="how-it-works" className="text-7xl font-bold mt-[100px]">How does it Works</h1>
-            <p className="text-gray-100 text-4xl mt-[100px] w-full sm:w-[500px] md:w-[600px] lg:w-[700px]">
+          <h1 id="how-it-works" className="text-4xl md:text-5xl font-bold md:font-medium mt-[100px]">How does it Works</h1>
+            <p className="text-gray-100 text-xl mt-[100px] w-full sm:w-[400px] lg:w-[600px]">
               Vizucar allows his user to search a car among thousands of vehicles.
               All of this is possible due to the Vizucar API
             </p>
@@ -47,13 +48,13 @@ export default function RootLayout({
           <Image className="rounded mt-[100px] mb-[100px]"
             src={"/vizucar-visual.png"}
             alt="interface of vizucar (beta)"
-            width={1000}
-            height={1020}
+            width={500}
+            height={510}
           />
         </section>
 
         <section className="bg-gradient-to-b from-[#161414] to-black text-cente p-4 h-full flex flex-col items-center justify-center">
-          <h1 id="team" className="text-7xl font-bold">Team</h1>
+          <h1 id="team" className="text-5xl sm:text-6xl font-bold sm:font-medium">Team</h1>
         </section>
 
         <TeamSection/>
