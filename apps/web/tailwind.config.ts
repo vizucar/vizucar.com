@@ -14,10 +14,11 @@ export default {
         foreground: "var(--foreground)",
       },
       screens: {
-        'max-[1900px]': { max: '1900px' },
+        'custom-sm': '530px', 
       },
       backgroundSize: {
-        'custom-zoom': '130%',
+        'zoom-135': '135%',
+        'zoom-130': '130%',
       },
       width: {
         "2/10": "20%",
@@ -29,6 +30,7 @@ export default {
         "7/10": "70%", 
         "8.5/10":"85%",
         "8/10":"80%",
+        "9/10":"90%",
       },
       spacing: {
         '1/10': '10%', 
@@ -39,8 +41,15 @@ export default {
         '3/10': '30%',
         '5/10': '50%',  
         '6/10': '60%',  
-        '7/10': '70%',        
+        '7/10': '70%',
+        '15': '3.75rem',
+        '50': '13rem',        
       },
+      fontSize: {
+        'xxs': '0.6rem', 
+        'xxxs': '0.5rem', 
+      },
+
       keyframes: {
         forward: {
           "0%": { transform: "translateX(100%)" },

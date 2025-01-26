@@ -36,7 +36,7 @@ const teamMembers = [
 
 export function TeamSection() {
     return (
-    <article className="flex justify-around items-center p-4 h-[500px] rounded-lg shadow-lg">
+    <article className="flex justify-around items-center p-4 h-[500px] rounded-lg">
         {teamMembers.map((member) => (
         <Link
             key={member.id}
@@ -45,19 +45,19 @@ export function TeamSection() {
             className="relative group flex flex-col items-center"
         >
 
-            <div className="relative w-55 h-55 bg-white rounded-full flex items-center justify-center shadow-lg">
+            <div className="relative w-55 h-55 bg-white rounded-full flex items-center justify-center ">
             <Image 
                 src={member.image}
                 alt={`${member.name}'s avatar`}
-                width={150}
-                height={300}
-                className="rounded-full object-cover shadow-lg"
+                width={75}
+                height={150}
+                className="rounded-full object-cover w-[75px] lg:w-[95px]"
             />
             </div>
 
-            <div className="absolute bottom-[-80px] left-1/2 transform -translate-x-1/2 w-[280px] bg-gray-800 text-white text-center rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
-            <h3 className="font-bold text-xl">{member.name}</h3>
-            <p className="text-5sm">{member.role}</p>
+            <div className="hidden sm:block absolute bottom-[-80px] left-1/2 transform -translate-x-1/2 sm:w-[180px] lg:w-[280px] bg-gray-800 text-white text-center rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+              <h3 className="font-bold sm:text-md lg:text-xl">{member.name}</h3>
+              <p className="sm:text-2xs lg:text-md">{member.role}</p>
             </div>
         </Link>
         ))}

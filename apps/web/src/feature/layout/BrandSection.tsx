@@ -64,7 +64,7 @@ export default function BrandSection() {
         </article>
 
 
-        <article className="relative overflow-hidden py-16 whitespace-nowrap bg-black">
+        <article className="relative overflow-hidden py-6 whitespace-nowrap bg-black">
             <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-l from-transparentBlack to-fullBlack z-10 pointer-events-none"></div>
 
             <div className="flex justify-between items-center inline-block animate-backward">
